@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vuelo Ideal</title>
+  <link rel="shortcut icon" href="logoPng.ico" >
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- <script src="code.jquery.com/jquery-1.10.2.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+  <div class="container">
+
+
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="page-header" >
+          <h1>Vuelo Ideal </h1>
+        </div>
+        <!-- aca van los videos -->
+        <!-- <h3> Patronato - Boca </h3> -->
+        <h3> Es fácil. Busca tu destino y te vamos a mostrar la fecha con el precio más barato para viajar </h3>
+        <div class="panel panel-default">
+          <img class="img-responsive" src="world1.jpg" alt="Mundo">
+          <br>
+          <div class="text-right">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Buscar</button>
+          </div>
+        </div>
+
+        <div style="min-height:2000px;overflow:auto;"></div>
+        <div id="exampleModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalInsLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="modalInsLabel">Nuovo eventos</h3>
+          </div>
+          <div class="modal-body" style="overflow: auto;">
+            <form class="eventInsForm" action="#" method="post">
+              <input type="text" id="test" class="addresspicker" />
+              <br>
+              <br>
+              <br>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="results"></div>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Chiudi</button>
+            <button id="saveEvent" class="ldg btn btn-primary" data-loading-text="Salvo...">Salva</button>
+          </div>
+        </div>
+
+
+        <h4>¿Quienes somos?</h4>
+
+        <h4><small>Somos un grupo de ingenieros que desarrollo un algoritmo para entender cual es la mejor fecha para viajar a tu destino favorito</small></h4>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+  <script>
+  $(function(){
+    $('#test').popover();​
+  });
+  </script>
+  <script>
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text('Encontrá más de 1000 destinos ')
+    modal.find('.modal-body input').val(recipient)
+  })
+  </script>
+  <script>
+  $(document).ready(function() {
+    console.log( "ready!" );
+    $('.carousel').carousel();
+  });
+  </script>
+
+
+
+  <script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
+  <script>
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover()
+  });
+  </script>
+  <script>
+  var availableTags = [
+    "ActionScript",
+    "AppleScript",
+    "Asp",
+    "BASIC",
+    "C",
+    "C++",
+    "Clojure",
+    "COBOL",
+    "ColdFusion",
+    "Erlang",
+    "Fortran",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme"
+  ];
+  $( ".addresspicker" ).autocomplete({
+    source: availableTags
+  });
+  $('#exampleModal').modal('show');
+  $( ".addresspicker" ).autocomplete( "option", "appendTo", ".eventInsForm" );
+  </script>
+
+</body>
+</html>

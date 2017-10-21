@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vuelo Ideal</title>
+  <link rel="shortcut icon" href="logoPng.ico" >
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- <script src="code.jquery.com/jquery-1.10.2.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+   <script>
+     $(function() {
+       var availableTags = [
+         "Alghero","Amsterdam","Aracaju","Arequipa","Armenia","Asunción","Atenas","Atlanta","Auckland","Bahia Blanca","Baltimore","Barcelona","Bari","Bariloche","Barranquilla","Belém","Belgrade","Belo Horizonte","Berlin","Bilbao","Bogota","Bolonia","Boston","Brasilia","Brindisi","Bruselas","Bucaramanga","Bucarest","Bucharest","Budapest","Buenos Aires","Buenos Aires","Búfalo","Burdeos","Cagliari","Cairo","Cali","Campo Grande","Cancún","Caracas","Cartagena","Casablanca","Catamarca","Catania","Charleston","Charlotte","Chicago","Cleveland","Cochabamba","Columbus","Comodoro Rivadavia","Córdoba","Corrientes","Covington","Cúcuta","Cuiabá","Curitiba","Cusco","Dallas","Denver","Detroit","Dubrovnik","El Calafate","Esquel","Estambul","Filadélfia","Florencia","Florianópolis","Formosa","Fortaleza","Foz de Iguazú","Frankfurt","Fuerteventura","Genoa","Ginebra","Goiania","Gran Canaria","Guarulhos","Guayaquil","Havana","Houston","Ibagué","Ibiza","Indianápolis","Iquitos","Isla Margarita","Jo‹o Pessoa","Jujuy","La Paz","La Rioja","Lamezia","Las Palmas","Las Vegas","Lima","Lisboa","London","Londres","Londrina","Los Angeles","Maceió","Madrid","Malta","Manaus","Manizales","Mar del Plata","Maracaibo","Maringá","Marsella","Medellin","Melbourne","Memphis","Mendoza","Menorca","Miami","Milan","Milán","Milano","Mineápolis","Monteria","Montevideo","Montreal","Moscow","Moscú","Munich","Nápoles","Nashville","Natal","Navegantes","Neiva","Neuquén","New York","Niza","Nova Orleans","Nueva York","Orlando","Oviedo","Palermo","Palma de Mallorca","Paraná","Paris","París","Pasto","Pereira","Pisa","Pittsburgh","Piura","Popayan","Porto","Porto Alegre","Porto Seguro","Posadas","Praga","Pucallpa","Puerto Iguazú","Punta Cana","Punta del Este","Quebec","Quieve","Recife","Reggio Calabria","Rerrenabaque","Resistencia","Richmond","Rio De Janeiro","Río de Janeiro","Río Gallegos","Rio Grande","Riohacha","Roma","Rome","Rosario","S. M. de los Andes","S‹o Luís","Salt Lake City","Salta","Salvador","San Andrés","San Diego","San Francisco","San Juan","San Luis","San Pablo","San Petersburgo","San Rafael","Santa Cruz","Santa Fe","Santa Marta","Santa Rosa","Santiago","Sao Paulo","Seattle","Seoul","Seúl","Sófia","Split","St. Louis","Stgo. del Estero","Sucre","Sydney","Tacna","Tanger","Tarapoto","Tel Aviv","Tenerife","Teresina","Termas Rio Hondo","Tirana","Toronto","Toulouse","Trelew","Trieste","Tucumán","Tunis","Turín","Uberlandia","Ushuaia","Uyuni","Valencia","Valledupar","Varsóvia","Venecia","Verona","Viedma","Vigo","Vitória","Washington","Zagrebe"
+       ];
+       $( "#tags" ).autocomplete({
+         source: availableTags
+       });
+     });
+     </script>
+   <style>
+   .ui-autocomplete{
+   	z-index:1050;
+   }
+   </style>
+
+
+</head>
+
+<body>
+  <div class="container">
+
+
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="page-header" >
+      <h1>Vuelo Ideal </h1>
+    </div>
+    <!-- aca van los videos -->
+    <!-- <h3> Patronato - Boca </h3> -->
+        <h3> Es fácil. Busca tu destino y te vamos a mostrar la fecha con el precio más barato para viajar </h3>
+        <div class="panel panel-default">
+        <img class="img-responsive" src="world1.jpg" alt="Mundo">
+        <br>
+        <div class="text-right">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >Buscar</button>
+        </div>
+        </div>
+
+<!-- tabindex="-1" -->
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+<!-- Modal content-->
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Encontrá más de 1000 destinos</h4>
+  </div>
+  <div class="modal-body">
+    <label for="tags">Elegí tu destino: </label>
+  <input id="tags">
+  </div>
+  <div class="modal-footer">
+    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+    <button type="button" class="btn btn-primary" onclick="location.href='https://www.skyscanner.net/?locale=es'">Buscar</button>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+        <h4>¿Quienes somos?</h4>
+
+    <h4><small>Somos un grupo de ingenieros que desarrollo un algoritmo para entender cual es la mejor fecha para viajar a tu destino favorito</small></h4>
+  </div>
+
+</div>
+</div>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+<script>
+$(function(){
+  $('#test').popover();​
+});
+</script>
+<script>
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('Encontrá más de 1000 destinos ')
+  modal.find('.modal-body input').val(recipient)
+})
+</script>
+<script>
+$(document).ready(function() {
+  console.log( "ready!" );
+  $('.carousel').carousel();
+});
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover()
+});
+</script>
+
+
+
+
+</body>
+</html>
